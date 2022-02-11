@@ -1,0 +1,34 @@
+------Authors------
+
+Dr. Rick Barnard (test_functions)
+Dr. Edoh Amiran (Armijo, test_functions, BFGS)
+Blake Ballew (me) (gradient_descent, BFGS_descent)
+
+
+------Files------
+
+--Armijo--
+
+-Performs an Armijo line search looking for a suitable step size
+along the current descent direction
+
+--test_functions--
+
+-Contains three python functions which represent three common test functions
+for minimization algorithms including the Rosenbrock and Beale functions
+-Each python function outputs the value and gradient of the function it represents
+
+--gradient_descent--
+-Performs classic gradient descent algorithm, where each descent
+direction is just the opposite direction as the gradient
+
+--BFGS_descent--
+-Performs Quasi-Newton method of minimization, where the Hessian is approximated
+via the BFGS (Broyden, Fletcher, Goldfarb, and Shanno) formula
+
+--updateBFGS--
+-Performs a single BFGS update
+
+
+
+
