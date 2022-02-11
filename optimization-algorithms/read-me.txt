@@ -29,6 +29,12 @@ via the BFGS (Broyden, Fletcher, Goldfarb, and Shanno) formula
 --updateBFGS--
 -Performs a single BFGS update
 
-
+------Input------
+-Both gradient_descent.py and BFGS_descent.py take two command line arguments representing the two
+starting coordinates as input.
+-Example input:     >python BFGS_descent.py 1.1 1.1
+-Note that if we wanted to test the Rosenbrock function instead of the Beale function,
+it would be necessary for us to manually change all instances of "test_functions.Beale(___)"
+to "test_functions.Rosenbrock(___)" in the respective algorithm's file.
 
 
