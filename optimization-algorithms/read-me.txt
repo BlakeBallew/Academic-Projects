@@ -30,6 +30,7 @@ via the BFGS (Broyden, Fletcher, Goldfarb, and Shanno) formula
 -Performs a single BFGS update
 
 ------Input------
+
 -Both gradient_descent.py and BFGS_descent.py take two command line arguments representing the two
 starting coordinates as input.
 -Example input:     >python BFGS_descent.py 1.1 1.1
