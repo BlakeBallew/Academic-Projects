@@ -31,7 +31,7 @@ def BFGS(x,y):
     H = np.identity(2)                                   # <- initialize positive definite matrix to be 2x2 identity 
     current = np.array([x,y])
 
-    for x in range(iterations):
+    for x in range(1,iterations+1):
         info = test_functions.Beale(current)        # <- info refers to the values given by the test function
         grad = info[1]                                   # as 2D list containing f(xk) and grad(f(xk)) respectively
         if np.linalg.norm(grad) < tolerance:
