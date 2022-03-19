@@ -1,0 +1,43 @@
+Author: Blake Ballew
+Description: explains assumptions/usage of the simulation
+
+
+General Assumptions of the simulation:
+
+-No drivers need to make U-turns
+-Destination is random
+-Roundabout contains four "slots" for cars to occupy
+-There are four inlets/exits to the roundabout
+-All inlets share the same probabiity that, given an open slot, there will be a 
+car waiting there to take it
+(^*if there are differing probabilities, set the uniform probability to be the average of the four
+as our previous assumption that destinations are random allows this to work/function roughly the same)
+-Cars are uniform in size
+-Drivers are more or less "perfect"
+-If a car exits, it is assumed a turn signal was used (by prev. assumption) and hence any car waiting
+can enter the roundabout while the previous car exits (effectively replacing their spot)
+
+Simulation Usage:
+
+Simulation functions are located in testing.py, which contains three functions. To run a function,
+type the name of that function via the command line upon running testing.py followed by the parameters of
+that function (all separated by spaces).
+
+Parameters:
+-C is the (average or approx) time needed for a car to go around the entire roundabout
+(we can think of this as containing the info for the size of the roundabout as well as the speed limit)
+-S is the number of seconds we wish to simulate
+-P is the probability [0,1] in the form X/100 that if there is an open spot in the roundabout passing one 
+of the four inlets, there will be a car waiting there to take that spot
+
+sample tests:
+
+>python testing.py P_constant 3600 40
+where S = 3600 seconds (one hour) and P = 0.40 which we call 40 since 40/100 = 0.40
+
+>python testing.py C_constant 3600 16
+where S = 3600 seconds and C = 16 is the avg number of seconds needed for a 
+car to circle this specific roundabout
+
+>python testing.py C_P_constant 3600 78 16
+where S = 3600 seconds, P = 0.78 (78/100), and C = 16
